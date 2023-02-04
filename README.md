@@ -1,5 +1,4 @@
 # NOClist
-## Overview
 
 Retrieve the NOC list using BADSEC API. The Bureau of Adversarial Dossiers and Securely Encrypted Code (BADSEC) has provided an API to retrieve a list of VIP users. The provided API is not the best and the task is to write a program that securely and politely asks the BADSEC server for this list of users and prints it to stdout in JSON format.
 
@@ -19,8 +18,7 @@ Retrieve the NOC list using BADSEC API. The Bureau of Adversarial Dossiers and S
 - Install the dependencies: `npm install`
 - Start the the BADSEC Server: `docker run --rm -p 8888:8888 adhocteam/noclist`
 - The server will run on port 8888 and the output should be Listening on http://0.0.0.0:8888
-- Open another tab on your terminal
-- Start the client: `npm start`
+- Open another tab on your terminal and start the client: `npm start`
 
 **Options**:
 
