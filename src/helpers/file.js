@@ -25,12 +25,12 @@ const errorLog = (error, errorLayer = 0) => {
     const errorComponents = [
       'Error ',
       `@Time: ${(new Date).toISOString() }: \n`,
-      errorContext      ? JSON.stringify(errorContext)+'\n' : '',
-      raisedFrom        ? '['                               : '',
-      error.fileName    ? `@${error.fileName}`              : '',
-      error.lineNumber  ? `:${error.lineNumber}`            : '',
-      raisedFrom        ? ']'                               : '',
-      error.stack       ? error.stack                       : `\n${error.message||''}`,
+      !!errorContext      ? JSON.stringify(errorContext)+'\n' : '',
+      !!raisedFrom        ? '['                               : '',
+      !!error.fileName    ? `@${error.fileName}`              : '',
+      !!error.lineNumber  ? `:${error.lineNumber}`            : '',
+      !!raisedFrom        ? ']'                               : '',
+      !!error.stack       ? error.stack                       : `\n${error.message||''}`,
     ];
 
     const errorMessage = errorComponents.join('').trim();
